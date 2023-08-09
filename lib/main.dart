@@ -67,8 +67,15 @@ class _MyHomePageState extends State<MyHomePage> {
             padding: const EdgeInsets.all(16.0),
             child: TextField(
               controller: _textEditingController,
+              autofocus: true,
+              onTap: () {},
+              cursorColor: Colors.lightBlue,
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.zero),
+                ),
+                hintText: 'Nese yaz ',
+                hintStyle: TextStyle(color: Colors.redAccent),
                 suffixIcon: IconButton(
                   onPressed: _addItem,
                   icon: Icon(Icons.add),
